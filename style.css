@@ -1,0 +1,116 @@
+/* style.css */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background-image: url('https://wallpapers.com/images/hd/beautiful-weather-with-gradient-sky-r6nxyjof50r7renl.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease-in-out;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+    
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgb(0, 0, 0);
+    width: 350px;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+h1 {
+    margin-bottom: 20px;
+    color: #ff6200;
+    font-size: 1.8rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.search-section {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="text"] {
+    padding: 10px 15px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: calc(100% - 140px);
+    box-sizing: border-box;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    padding: 10px 15px;
+    background: linear-gradient(135deg, #000000, #ff8400);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ff8400,  #000000 );
+    transform: translateY(-2px);
+}
+
+.weather-info {
+    margin-top: 20px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.weather-info.hidden {
+    opacity: 0;
+}
+
+.weather-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.weather-details img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.weather-details p {
+    margin: 5px 0;
+    color: #ffffff;
+    font-size: 1rem;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+
+.weather-details p span {
+    font-weight: bold;
+    color: #000;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    input[type="text"] {
+        width: calc(100% - 120px);
+    }
+}
